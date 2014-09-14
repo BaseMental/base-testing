@@ -4,7 +4,7 @@ class LeadsEditPage
 
   span(:lead_status, :class => 'lead-status')
 
-  def wait_for_lead_status
+  def lead_status_with_wait
     wait_until do
       lead_status_element.visible?
     end

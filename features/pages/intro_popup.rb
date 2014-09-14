@@ -1,4 +1,4 @@
-module IntroFrame
+module IntroPopup
   include PageObject
 
   link(:skip_intro_link, :xpath => "//div[@id='reports-loader-skip-intro']/a[contains(@class,'gray')]")

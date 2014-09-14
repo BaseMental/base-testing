@@ -1,8 +1,8 @@
 base-testing
 ============
-Example framework for UI tests of Base CRM. Ruby 2.0 + Watir webdriver playground that implements the following:
+Example framework for UI tests of Base CRM. Ruby 2.0 + Watir webdriver + Cucumber playground that implements the following:
 
-"Write an automated test in your language and framework of choice which does the following:
+Write an automated test in your language and framework of choice which does the following:
 
 1. Log into the Web version of Base.
 2. Create a new Lead.

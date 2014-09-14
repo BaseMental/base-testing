@@ -10,7 +10,7 @@ When /^I create new lead$/ do
 end
 
 Then(/^Lead status is "(.*?)"$/) do |name|
-  expect(on_page(LeadsEditPage).wait_for_lead_status).to eq(name)
+  expect(on_page(LeadsEditPage).lead_status_with_wait).to eq(name)
 end
 
 When (/^I change setting lead status name from "(.*?)"$/) do |initial_status|
@@ -22,5 +22,5 @@ end
 Then(/^Lead status name is applied on leads page$/) do
   on_page(SettingsPage).go_to_leads
   on_page(LeadsPage).open_lead_by_name(@lead['first_name'] + ' ' + @lead['last_name'])
-  expect(on_page(LeadsEditPage).wait_for_lead_status).to eq(@fake_status_name)
+  expect(on_page(LeadsEditPage).lead_status_with_wait).to eq(@fake_status_name)
 end

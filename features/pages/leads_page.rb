@@ -1,8 +1,8 @@
-require_relative ('intro_frame')
+require_relative ('intro_popup')
 
 class LeadsPage
   include PageObject
-  include IntroFrame
+  include IntroPopup
 
   direct_url '#{FigNewton.base_url}/leads'
 
