@@ -1,0 +1,7 @@
+base_url: https://app.futuresimple.com
+browser: firefox
+browser_width: 1280
+browser_height: 720
+
+default_user_email: put_your_evaluation_email_here
+default_user_password: put_your_evaluation_password_here
