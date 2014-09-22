@@ -10,24 +10,13 @@ class LeadsNewPage
   text_field(:email, :id => 'lead-email')
   button(:save, :xpath => "//div[contains(@class,'edit-buttons')]/button[contains(@class,'save')]")
 
-  #TODO: default data handling can be improved
-  DEFAULT_DATA = {
-      'first_name' => Faker::Name.first_name,
-      'last_name' => Faker::Name.last_name,
-      'company' => Faker::Company.name,
-      'title' => Faker::Lorem.sentence,
-      'email' => Faker::Internet.email
-  }
-
-  def add_new_lead(data={})
-    data = DEFAULT_DATA.merge(data)
-    self.first_name = data['first_name']
-    self.last_name = data['last_name']
-    self.company = data['company']
-    self.title = data['title']
-    self.email = data['email']
+  def add_new_lead(lead)
+    self.first_name = lead.first_name
+    self.last_name = lead.last_name
+    self.company = lead.company
+    self.title = lead.title
+    self.email = lead.email
     save
-    data
   end
 
 end
